@@ -1,0 +1,15 @@
+<h2>PreventBubblingDirective</h2>
+
+<div fxLayout fxLayoutAlign="stretch start" fxLayoutGap="16px">
+
+  <div fxFlex class="container" (click)="onContainerClick()">
+    <p>Prevent click bubbling on container</p>
+    <button mat-raised-button color="primary" [rtPreventBubbling]="'click'"(click)="onButtonClick()">Click me</button>
+  </div>
+
+  <div fxFlex class="container" (click)="onContainerClick()">
+    <p>Click event is bubbling here</p>
+    <button mat-raised-button color="primary" (click)="onButtonClick()">Click me</button>
+  </div>
+
+</div>

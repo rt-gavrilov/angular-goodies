@@ -1,10 +1,14 @@
-import { NgModule } from '@angular/core';
-import { AngularGoodiesComponent } from './angular-goodies.component';
+import {NgModule} from '@angular/core';
+import {PreventBubblingDirective} from "./prevent-bubbling.directive";
 
 @NgModule({
   imports: [
   ],
-  declarations: [AngularGoodiesComponent],
-  exports: [AngularGoodiesComponent]
+  declarations: [
+    PreventBubblingDirective
+  ],
+  exports: [
+    PreventBubblingDirective
+  ]
 })
 export class AngularGoodiesModule { }

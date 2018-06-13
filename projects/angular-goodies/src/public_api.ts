@@ -3,5 +3,5 @@
  */
 
 export * from './lib/angular-goodies.service';
-export * from './lib/angular-goodies.component';
+export * from './lib/prevent-bubbling.directive';
 export * from './lib/angular-goodies.module';
