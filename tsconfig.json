@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "angular-goodies": [
+        "dist/angular-goodies"
+      ],
+      "angular-goodies/*": [
+        "dist/angular-goodies/*"
+      ]
+    }
   }
 }

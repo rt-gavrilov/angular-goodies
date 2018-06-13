@@ -121,6 +121,46 @@
           }
         }
       }
+    },
+    "angular-goodies": {
+      "root": "projects/angular-goodies",
+      "sourceRoot": "projects/angular-goodies/src",
+      "projectType": "library",
+      "prefix": "rt",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angular-goodies/tsconfig.lib.json",
+            "project": "projects/angular-goodies/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/angular-goodies/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-goodies/src/test.ts",
+            "tsConfig": "projects/angular-goodies/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-goodies/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-goodies/tsconfig.lib.json",
+              "projects/angular-goodies/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "demo-app"
